@@ -1,0 +1,30 @@
+# Requirements for ChronosSktimeForecaster
+# ==========================================
+# This file lists all dependencies needed to run the Chronos-T5 forecaster
+# with sktime integration on CPU with 8GB RAM constraints.
+
+# Core ML framework - PyTorch CPU-only version (saves ~1GB vs full CUDA)
+# Use this for systems without NVIDIA GPU:
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch>=2.0.0
+
+# Hugging Face libraries (required by Chronos)
+transformers>=4.30.0
+accelerate>=0.20.0
+
+# Amazon Chronos Forecasting Library
+# Official package from PyPI:
+chronos-forecasting>=1.0.0
+
+# sktime - unified interface for time series
+sktime>=0.24.0
+
+# Core scientific computing
+numpy>=1.21.0
+pandas>=1.3.0
+
+# Visualization (optional, for the usage example)
+matplotlib>=3.5.0
+
+# Additional utilities
+tqdm>=4.60.0
